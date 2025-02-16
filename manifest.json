@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "Music Anywhere - Redirector",
+    "version": "1.0",
+  
+    "description": "Choose your favourite music platform and get redirected to it when the extension detect an other platform.",
+  
+    "icons": {
+      "48": "icons/music_48.png",
+      "96": "icons/music_96.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*.spotify.com/*/track/*", "*://*.deezer.com/*/track/*"],
+        "js": ["redirect.js"]
+      }
+    ],
+
+    "host_permissions": [
+      "https://music.storry.fr/"
+    ],
+
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "valentin.beauget@gmail.com"
+        }
+    }
+}
+  
