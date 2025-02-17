@@ -37,4 +37,17 @@ document.addEventListener("DOMContentLoaded", function () {
       browser.runtime.reload();
       window.close(); // Ferme la popup après le rechargement
     });
+
+  //track info
+  //get the current active tab's URL
+  browser.tabs
+    .query({ active: true, currentWindow: true })
+    .then((tabs) => {
+      const url = tabs[0].url;
+      document.getElementById("track-info").innerText = url;
+    })
+    .catch((error) => {
+      console.error("Error getting tab URL:", error);
+      document.getElementById("track-info").innerText = "Error getting URL";
+    });
 });
