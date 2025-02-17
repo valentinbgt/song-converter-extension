@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Anywhere - Redirector</title>
+</head>
+<body>
+    <h1>Music Anywhere - Redirector</h1>
+    <br>
+    <label for="platform-select">Choose your favourite music platform :</label>
+    <br>
+    <select id="platform-select">
+        <option value="none">None</option>
+        <option value="spotify">Spotify</option>
+        <option value="deezer">Deezer</option>
+    </select>
+    <br><br>
+    <input type="checkbox" id="auto-redirect"><label for="auto-redirect">Auto redirect</label>
+    <br><br>
+    <button id="reload-button">Reload the extension</button>
+    <br><br>
+    <p id="debug-log"></p>
+    
+    
+    <script src="popup.js"></script>
+</body>
+</html>

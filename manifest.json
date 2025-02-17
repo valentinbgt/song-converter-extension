@@ -25,6 +25,16 @@
         "gecko": {
             "id": "valentin.beauget@gmail.com"
         }
-    }
+    },
+
+    "action": {
+        "default_popup": "popup.html"
+    },
+
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "storage"
+    ]
 }
   
